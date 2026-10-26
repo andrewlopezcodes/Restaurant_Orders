@@ -273,3 +273,123 @@ _______________________________
 2675			185.10
 */
 
+-- Task 12.View the details of the highest spend order. Which specific items where purchased?
+select
+	order_details.order_id,
+    menu_items.item_name    
+from order_details
+	inner join menu_items
+    on
+    menu_items.menu_item_id
+    =
+    order_details.item_id
+where order_id in (440);
+
+/*
+__________________________________
+order_id		|	item_name
+__________________________________
+440					Steak Tacos
+440					Hot Dog
+440					Spaghetti
+440					Spaghetti & Meatballs
+440					Spaghetti & Meatballs
+440					Fettuccine Alfredo
+440					Fettuccine Alfredo
+440					Korean Beef Bowl
+440					Meat Lasagna
+440					Edamame
+440					Chips & Salsa
+440					Chicken Parmesan
+440					French Fries
+440					Eggplant Parmesan
+*/
+
+
+-- Task 13. View the details of the top 5 highest spend orders.
+select
+	order_details.order_id,
+    menu_items.item_name    
+from order_details
+	inner join menu_items
+    on
+    menu_items.menu_item_id
+    =
+    order_details.item_id
+where order_id in (440, 2075, 1957, 330, 2675);
+
+/*
+__________________________________
+order_id		|	item_name
+__________________________________
+330					Orange Chicken
+330					Hot Dog
+330					Tofu Pad Thai
+330					Tofu Pad Thai
+330					Spaghetti
+330					Spaghetti & Meatballs
+330					Korean Beef Bowl
+330					Salmon Roll
+330					Steak Burrito
+330					Steak Torta
+330					Chips & Salsa
+330					Chips & Salsa
+330					Chicken Parmesan
+330					Potstickers
+440					Steak Tacos
+440					Hot Dog
+440					Spaghetti
+440					Spaghetti & Meatballs
+440					Spaghetti & Meatballs
+440					Fettuccine Alfredo
+440					Fettuccine Alfredo
+440					Korean Beef Bowl
+440					Meat Lasagna
+440					Edamame
+440					Chips & Salsa
+440					Chicken Parmesan
+440					French Fries
+440					Eggplant Parmesan
+1957				Orange Chicken
+1957				Hot Dog
+1957				Veggie Burger
+1957				Fettuccine Alfredo
+1957				Chicken Burrito
+1957				Salmon Roll
+1957				Edamame
+1957				Steak Burrito
+1957				Steak Burrito
+1957				Chicken Parmesan
+1957				Chicken Parmesan
+1957				French Fries
+1957				Eggplant Parmesan
+1957				Eggplant Parmesan
+2075				Orange Chicken
+2075				Chicken Tacos
+2075				Cheeseburger
+2075				Spaghetti
+2075				Spaghetti & Meatballs
+2075				Meat Lasagna
+2075				Mushroom Ravioli
+2075				California Roll
+2075				Salmon Roll
+2075				Steak Burrito
+2075				Chips & Salsa
+2075				Eggplant Parmesan
+2075				Eggplant Parmesan
+2675				Hamburger
+2675				Cheeseburger
+2675				Tofu Pad Thai
+2675				Spaghetti
+2675				Chicken Burrito
+2675				Chicken Burrito
+2675				Mushroom Ravioli
+2675				Salmon Roll
+2675				Steak Torta
+2675				Mac & Cheese
+2675				Chips & Guacamole
+2675				Potstickers
+2675				Eggplant Parmesan
+2675				Eggplant Parmesan
+*/
+
