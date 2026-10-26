@@ -248,3 +248,28 @@ ___________________________________________________________________
 115					Chicken Tacos	Mexican			123
 */
 
+-- Task 11.	What were the top 5 orders that spent the most money?
+select
+	order_id,
+    sum(price) as 'Order Total'
+from menu_items
+	left join order_details
+    on
+    menu_items.menu_item_id
+    =
+    order_details.item_id
+group by order_id
+order by sum(price) desc
+limit 5;
+
+/*
+_______________________________
+order_id	|	Order Total
+_______________________________
+440				192.15
+2075			191.05
+1957			190.10
+330				189.70
+2675			185.10
+*/
+
