@@ -134,3 +134,40 @@ _____________________________
 4482		|	14
 */
 
+-- Task 8. How many orders had more than 12 items?
+select
+	order_id,
+    count(order_id) as 'Items in Order'
+from order_details
+group by order_id
+having count(order_id) > 12
+order by count(order_id) desc;
+
+/* 23 orders have more that 12 items
+_____________________________
+order_id	| Items in Order
+_____________________________
+330			|	14
+440			|	14
+443			|	14
+1957		|	14
+2675		|	14
+3473		|	14
+4305		|	14
+4482		|	14
+740			|	13
+1274		|	13
+1569		|	13
+1685		|	13
+1734		|	13
+2075		|	13
+2126		|	13
+2188		|	13
+2725		|	13
+3292		|	13
+3583		|	13
+4623		|	13
+4836		|	13
+5066		|	13
+5200		|	13
+*/
