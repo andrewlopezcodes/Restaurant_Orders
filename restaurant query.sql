@@ -191,5 +191,60 @@ from menu_items
     =
     order_details.item_id;
     
+-- Task 10. What were the least and most ordered items? What categories where they in?
 
-    
+select
+	menu_item_id,
+    menu_items.item_name,
+    menu_items.category,
+    count(menu_item_id) as "Times Ordered"
+from menu_items
+	left join order_details
+    on
+    menu_items.menu_item_id
+    =
+    order_details.item_id
+group by menu_item_id
+order by count(menu_item_id) desc;
+
+/*
+The least ordered item was Chicken Tacos in the Mexican category.
+The most ordered item was Hamburger in the American category.
+
+___________________________________________________________________
+menu_item_id	|	itme_name	|	category	|	Times Ordered
+___________________________________________________________________
+101					Hamburger		American		622
+113					Edamame			Asian			620
+109					Korean Be..		Asian			588
+102					Cheeseburger	American		583
+106					French Fries	American		571
+108					Tofu Pad Thai	Asian			562
+120					Steak Torta		Mexican			489
+125					Spaghetti...	Italian			470
+105					Mac & Cheese	American		463
+122					Chips & Salsa	Mexican			461
+107					Orange Chicken	Asian			456
+117					Chicken Burrito	Mexican			455
+132					Eggplant Parm	Italian			420
+119					Chicken Torta	Mexican			379
+124					Spaghetti		Italian			367
+131					Chicken Parm	Italian			364
+110					Pork Ramen		Asian			360
+129					Mushroom Ravi	Italian			359
+111					California Ro	Asian			355
+118					Steak Burrito	Mexican			354
+112					Salmon Roll		Asian			324
+127					Meat Lasagna	Italian			273
+103					Hot Dog			American		257
+126					Fettuccine Al	Italian			249
+130					Shrimp Scampi	Italian			239
+104					Veggie Burger	American		238
+123					Chips & Guac	Mexican			237
+121					Cheese Quesa	Mexican			233
+116					Steak Tacos		Mexican			214
+128					Cheese Lasa		Italian			207
+114					Potstickers		Asian			205
+115					Chicken Tacos	Mexican			123
+*/
+
