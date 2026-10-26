@@ -112,5 +112,25 @@ from order_details;
 select count(item_id) from order_details;
 -- There were 12097 items ordered within the date range of 2023-01-01 - 2023-03-31.
 
--- 
+-- Task 7. Which orders had the most number of items?
+select
+	order_id,
+    count(order_id) as 'Items in Order'
+from order_details
+group by order_id
+order by count(order_id) desc;
+
+/*
+_____________________________
+order_id	| Items in Order
+_____________________________
+330			|	14
+440			|	14
+443			|	14
+1957		|	14
+2675		|	14
+3473		|	14
+4305		|	14
+4482		|	14
+*/
 
