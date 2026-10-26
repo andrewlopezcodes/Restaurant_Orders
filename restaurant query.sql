@@ -33,3 +33,27 @@ order by price
 limit 1;
 -- the least expensive item on the menu is Edamame at $5.00
 
+-- Task 3.  How many Italian dishes are on the menu? What are the least and most expensive Italian dishes on the menu?
+select
+	menu_item_id,
+    item_name,
+    category,
+    price
+from menu_items
+where category = 'Italian'
+order by price
+limit 1;
+-- The least expensive Italian dish is Spaghetti at $14.50
+
+select
+	menu_item_id,
+    item_name,
+    category,
+    price
+from menu_items
+where category = 'Italian'
+order by price desc
+limit 1;
+-- The most expensive Italian dish is Shrimp Scampi at $19.95
+    
+
