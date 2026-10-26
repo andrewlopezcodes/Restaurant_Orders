@@ -56,4 +56,12 @@ order by price desc
 limit 1;
 -- The most expensive Italian dish is Shrimp Scampi at $19.95
     
-
+-- Task 4. How many dishes are in each category? What is the average dish price within each category?
+select
+	category as 'Category',
+	count(category) as 'Number of Dishes in Category',
+    round(avg(price), 2) as 'Avg Price'
+from menu_items
+group by 
+	category
+order by category desc;
