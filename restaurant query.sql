@@ -16,6 +16,7 @@ from menu_items;
 select
 	count(menu_item_id) as 'Number of Items'
 from menu_items;
+-- there are 32 items on the menu
 
 -- Task 2. What are the least and most expensive items on the menu?
 select
@@ -65,3 +66,12 @@ from menu_items
 group by 
 	category
 order by category desc;
+/*
+___________________________________________
+Category | Number of Dishes | Avg Price
+___________________________________________
+Mexican	| 9                	|11.80
+Italian	| 9					|16.75
+Asian	| 8					|13.48
+American| 6					|10.07
+*/
