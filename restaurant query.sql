@@ -2,7 +2,7 @@ use restaurant_db;
 
 /*
 Objective 1
-Explore the items table
+EXPLOR THE ITMS TABLE
 Your first objective is to better understand the items table by 
 finding the number of rows in the table, the least and most 
 expensive items, and the item prices within each category.
@@ -74,4 +74,14 @@ Mexican	| 9                	|11.80
 Italian	| 9					|16.75
 Asian	| 8					|13.48
 American| 6					|10.07
+____________________________________________
+*/
+
+
+/*
+Objective 2
+EXPLORE THE ORDERS TABLE
+Your second objective is to better understand the orders table 
+by finding the date range, the number of items within each order, 
+and the orders with the highest number of items.
 */
