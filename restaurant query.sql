@@ -84,4 +84,22 @@ EXPLORE THE ORDERS TABLE
 Your second objective is to better understand the orders table 
 by finding the date range, the number of items within each order, 
 and the orders with the highest number of items.
-*/
+
+
+Task 5. View the order_details table. What is the date range of the table?
+ */
+ select 
+	* 
+from order_details;
+
+ select 
+	min(order_date) as 'Oldest Date',
+    max(order_date) as 'Most Recent Date'
+from order_details;
+/*
+The date range of the table is 2023-01-01 - 2023-03-31.
+
+
+Task 6.*/
+ 
+
