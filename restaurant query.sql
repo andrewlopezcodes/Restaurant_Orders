@@ -100,6 +100,17 @@ from order_details;
 The date range of the table is 2023-01-01 - 2023-03-31.
 
 
-Task 6.*/
- 
+Task 6. How many orders were made within this date range? 
+How many items were ordered within this date range?
+*/
+
+select
+	count(order_date)
+from order_details;
+-- There were 12234 orders made within the date range of 2023-01-01 - 2023-03-31.
+
+select count(item_id) from order_details;
+-- There were 12097 items ordered within the date range of 2023-01-01 - 2023-03-31.
+
+-- 
 
